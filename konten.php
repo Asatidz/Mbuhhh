@@ -16,7 +16,8 @@ $halaman = [
     "list_update",
     "list_hapus",
     "list_tebus",
-    "list_proses"
+    "list_proses",
+    "cek"
 ];
 
 if (isset($_GET['hal'])) {

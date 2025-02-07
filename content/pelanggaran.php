@@ -19,6 +19,7 @@
             <tr>
               <th>No</th>
               <th>Nama pelanggaran</th>
+              <th>Jenis pelanggaran</th>
               <th>Poin</th>
               <th>Kode pelanggaran</th>
               <th>Aksi</th>
@@ -36,6 +37,7 @@
             <tr>
               <td><?= $no ?></td>
                 <td><?= $data['nama_pelanggaran'] ?></td>
+                <td><?= $data['jenis_pelanggaran'] ?></td>
                 <td><?= $data['poin'] ?></td>
                 <td><?= $data['kode_pelanggaran'] ?></td>
               <td>

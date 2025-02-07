@@ -1,227 +1,247 @@
-/* css file login */
-
-* {
-  box-sizing: border-box;
-}
-
-/* mengatur font dan background halaman */
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.page-container {
   margin: 0;
-  background: purple;
-  box-sizing: border-box;
-  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f0f0;
 }
-
-/* membuat container menjadi flex box dan kotak login di tengah */
-.container {
+.page-container .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
-/* membuat kotak login form lear 400px dan background putih */
-.login-box {
-  margin-top: 150px;
-  flex-basis: 400px;
-  background: #fff;
+.page-container .header {
+  background-color: #333;
+  color: white;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-container .header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+.page-container .header nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.page-container .main {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #333;
+  color: white;
+  position: relative;
   padding: 20px;
 }
-
-/* mengatur judul form dengan border bawah dan posisi di tengah */
-.login-box h2 {
-  border-bottom: 1px solid #ccc;
-  color: #555;
-  text-align: center;
-  padding-bottom: 20px;
-  margin: 0 0 20px;
-}
-
-/* mengatur agar tag input dan select memenuhi container dan tampilan mening */
-input,
-select {
+.page-container .main img {
+  position: absolute;
   width: 100%;
-  padding: 15px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
 }
-
-/* mengatur tampilan tombol submit */
-input[type="submit"] {
-  background-color: purple;
+.page-container .main-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  text-align: left;
+  padding: 20px;
+  align-self: center;
+}
+.page-container .main-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.page-container .main-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.page-container .signup-form {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin-bottom: 20px;
+  align-self: flex-end;
+}
+.page-container .signup-form h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: black;
+}
+.page-container .signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.page-container .signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
   border: none;
-  color: #fff;
-  text-decoration: none;
+  border-radius: 4px;
   cursor: pointer;
 }
-
-/* ======================= */
-/* style halaman dashboard */
-/* ======================= */
-header {
-  background: purple;
-  color: #fff;
-  padding: 15px 20px;
-  font-size: 20px;
-}
-
-/* mengatur lebar menu */
-aside {
-  flex: 20%;
-  background: #222;
-}
-
-/* mengatur lebar konten  */
-section.main {
-  flex: 80%;
-  background: #fff;
-  min-height: 530px;
-  padding: 15px 20px;
-}
-
-/* mengatur footer dn teks ditengah */
-footer {
-  background: #ccc;
-  color: #555;
-  padding: 20px;
+.page-container .footer {
+  background-color: #333;
+  color: white;
   text-align: center;
+  padding: 0px 20px;
+}
+.page-container .footer i {
+  color: red;
+}
+.page-container .footer span {
+  margin: 0 5px;
 }
 
-/* mengatur layout(responsive) */
-@media (max-width: 700px) {
+/* ===========  */
+/* dashboard */
+/* =========== */
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+  width: 100%;
+}
+.container {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+.sidebar {
+  width: 20%;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 20px;
+}
+.sidebar h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar ul li {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li a i {
+  margin-right: 10px;
+}
+.main-content {
+  width: 80%;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.stats .stat-box {
+  background-color: #c4c4c4;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+.stats .stat-box h3 {
+  margin: 0;
+  font-size: 18px;
+}
+.stats .stat-box p {
+  font-size: 48px;
+  margin: 10px 0 0;
+}
+.tables {
+  display: flex;
+  justify-content: space-around;
+}
+.table-container {
+  width: 45%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #e0e0e0;
+}
+.footer {
+  background-color: #4a4a4a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.footer i {
+  color: red;
+}
+.footer span {
+  color: gold;
+}
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
   }
-}
-
-/* navigas dan membuang pading */
-.menu {
-  padding: 0;
-}
-
-/* menambah border bawah */
-.menu li {
-  border-bottom: 1px solid dotted #444;
-  list-style: none;
-}
-
-/* mengatur desain mneu yang dibuat dengan tag a */
-.menu a {
-  display: block;
-  padding: 20px 20px;
-  color: #fff;
-  text-decoration: none;
-}
-
-/* mengammbil background menu ketika ditunjuk mouse */
-.menu a:hover {
-  background: #000;
-}
-
-/* ======================= */
-/* Tabel Data Pegawai */
-/* ======================= */
-/* mengatur desain judul halaman dengan border  */
-.judul {
-  color: #555;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-}
-
-/* mengatur lebar tabel penuh dan antaer boordor tdk memmiliki jarak */
-.table {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-/* menambahkan border dan pading pada sel tambahan */
-.table th,
-.table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-}
-
-/* background judul table */
-.table th {
-  background: #eee;
-}
-
-/* mengatur desain tombol tag <a> */
-.tombol {
-  display: inline-block;
-  max-width: 150px;
-  padding: 15px 30px;
-  color: #fff;
-  text-decoration: none;
-  background: purple;
-  cursor: pointer;
-}
-
-/* desian tombol eit ddan haus */
-.tombol.edit,
-.tombol.hapus {
-  padding: 10px 15px;
-  font-size: 12px;
-}
-
-.tombol.hapus {
-  background: #fc4c4c;
-}
-
-.table tr {
-  text-align: center;
-}
-
-/* ======================= */
-/* Formmmmmmmmmmmmmmmmmmmmm */
-/* ======================= */
-
-/* agar tdk pengaruh float */
-.form-group {
-  clear: both;
-}
-
-/* mengatur lebar label */
-.form-group label {
-  display: block;
-  padding: 15px 0;
-  float: left;
-  width: 30%;
-  font-weight: bold;
-}
-
-/* ngatur lebar input sejajar dgn label */
-.form-group .input {
-  display: block;
-  width: 50%;
-  float: left;
-}
-
-/* teks input radio */
-input[type="radio"] {
-  width: 50px;
-}
-.tombol.simpan {
-  background: purple;
-}
-.tombol.reset {
-  background: #fb8307;
-}
-
-/* membuat tampilan form numpuk pada lyar */
-@media (max-width: 700px) {
-  .form-group label,
-  .form-group .input {
+  .sidebar,
+  .main-content {
     width: 100%;
   }
-}
-
-table img {
-  width: 80px; /* Atur lebar sesuai kebutuhan */
-  height: auto; /* Biarkan tinggi menyesuaikan */
-  max-height: 100px; /* Batasi tinggi maksimal */
-  object-fit: cover; /* Menjaga proporsi gambar */
-  display: block;
-  margin: auto;
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tables {
+    flex-direction: column;
+    align-items: center;
+  }
+  .table-container {
+    width: 90%;
+    margin-bottom: 20px;
+  }
 }

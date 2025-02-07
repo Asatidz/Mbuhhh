@@ -24,28 +24,27 @@ if(empty($_SESSION['username']) OR empty($_SESSION['password'])) {
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- header -->
-    <header>Syinpewa</header>
-
+    <div class="header">
+        System Informasi Pelaporan Pelanggaran
+    </div>
     <div class="container">
-      <!-- menu -->
-      <aside>
-        <ul class="menu">
-          <li><a href="?hal=dashboard" class="aktif">Dashboard</a></li>
-          <li><a href="?hal=pelanggaran">Plg</a></li>
-          <li><a href="?hal=jabatan">Data Jabatan</a></li>
-          <li><a href="?hal=logout.php">Keluar</a></li>
-        </ul>
-      </aside>
-
+        <div class="sidebar">
+            <ul>
+                <li><a href="?hal=dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="?hal=pelanggaran"><i class="fas fa-exclamation-triangle"></i> Pelanggaran</a></li>
+                <li><a href="#"><i class="fas fa-user-graduate"></i> Data Siswa</a></li>
+                <li><a href="#"><i class="fas fa-history"></i> Riwayat</a></li>
+                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>  
       <!-- content -->
       <section class="main">
         <?php include "konten.php" ?>
       </section>
+    <div class="footer">
+        By Made <i class="fas fa-heart"></i> by TechnoMancers <span>© 2025</span>
     </div>
-
-    <!-- footer -->
-    <footer>Copyright &copy; Asatidzal Hakiim</footer>
   </body>
 </html>
 
