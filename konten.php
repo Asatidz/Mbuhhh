@@ -9,14 +9,14 @@ $halaman = [
     "pelanggaran_edit",
     "pelanggaran_update",
     "pelanggaran_hapus",
-    "list",
-    "list_tambah",
-    "list_insert",
-    "list_edit",
-    "list_update",
-    "list_hapus",
-    "list_tebus",
-    "list_proses",
+    "siswa",
+    "siswa_tambah",
+    "siswa_insert",
+    "siswa_edit",
+    "siswa_update",
+    "siswa_hapus",
+    "siswa_tebus",
+    "siswa_proses",
     "cek"
 ];
 

@@ -13,7 +13,7 @@
       <!-- content -->
       <section class="main">
         <h2 class="judul">Data Jabatan</h2>
-        <a href="?hal=jabatan_tambah" class="tombol">Tambah</a>
+        <a href="?hal=pelanggaran_tambah" class="tombol">Tambah</a>
         <table class="table">
           <thead>
             <tr>
@@ -39,7 +39,7 @@
                 <td><?= $data['nama_pelanggaran'] ?></td>
                 <td><?= $data['jenis_pelanggaran'] ?></td>
                 <td><?= $data['poin'] ?></td>
-                <td><?= $data['kode_pelanggaran'] ?></td>
+                <td><?= $data['kode'] ?></td>
               <td>
                 <a href="?hal=pelanggaran_edit&id=<?= $data['id_pelanggaran'] ?>" class="tombol edit"> Edit </a>
                 <a href="?hal=pelanggaran_hapus&id=<?= $data['id_pelanggaran'] ?>" class="tombol hapus"> Hapus </a>
