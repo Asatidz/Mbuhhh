@@ -19,6 +19,7 @@ $halaman = [
     "siswa_proses",
     "riwayat",
     "riwayat_tambah",
+    "riwayat_tam",
     "riwayat_insert",
     "riwayat_edit",
     "riwayat_update",

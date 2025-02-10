@@ -66,7 +66,7 @@ $jenispl = $_POST['jenis'];
 //         $result = mysqli_query($con,$query);
 //     }
 // }
-if ($hasil > 0){
+if ($hasil >= 1){
     echo "barang berhasil diperbaharui!";
     echo "<meta http-equiv='refresh' content='2; url=?hal=pelanggaran'>";
 } else{

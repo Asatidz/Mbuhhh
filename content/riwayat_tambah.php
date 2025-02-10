@@ -103,11 +103,11 @@
         <input type="radio" name="gender" id="gender" value="P" <?= $n ?> disabled> Perempuan
     </div>
 
+    </form>
 
-
-    
-
-        <?php    
+      <?php    
+        }
+         
         }
         ?>
 
@@ -132,12 +132,20 @@
                 $no++;?>
 
 
-    <div class="form-group">
-        <label for="nama">Nama Pl</label>
-        <div class="input">
-            <input type="text" name="nama_pelanggaran" id="nama_pelanggaran" value="<?=$data['nama_pelanggaran']?>" disabled>
-        </div>
+<!-- Input kode barang -->
+<div class="form-group">
+    <label for="kode">kode Pl</label>
+    <div class="input">
+        <input type="text" name="kode" id="kode" value="<?=$data['kode']?>" disabled>
     </div>
+</div>
+
+<div class="form-group">
+    <label for="nama">Nama Pl</label>
+    <div class="input">
+        <input type="text" name="nama" id="nama" value="<?=$data['nama_pelanggaran']?>" disabled>
+    </div>
+</div>
 
 
         <div class="form-group">
@@ -159,17 +167,11 @@
         </div>
     </div>
 
+    </form>
     
-    
-    <!-- Input kode barang -->
-    <div class="form-group">
-        <label for="kode">kode Pl</label>
-        <div class="input">
-            <input type="text" name="kode" id="kode" value="<?=$data['kode']?>" disabled>
-        </div>
-    </div>
 
+<?php    
+}
 
-<?php
-        }
-        ?>
+}
+?>
