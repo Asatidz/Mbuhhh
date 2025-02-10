@@ -6,10 +6,10 @@ $lokasi = $_FILES['foto']['tmp_name'];
 $tipe   = $_FILES['foto']['type'];
 $ukuran = $_FILES['foto']['size'];
 
-$nama       = $_POST['nama'];
+$nama       = $_POST['nama_siswa'];
 $nis         = $_POST['nis'];
 $tgl        = $_POST['tanggal'];
-$kelas = $_POST['kelas'];
+$kelas      = $_POST['kelas'];
 $jurusan        = $_POST['jurusan'];
 $gender        = $_POST['gender'];
 
@@ -24,6 +24,7 @@ if($foto == ""){
     $query .= "kelas = '$kelas', ";
     $query .= "jurusan = '$jurusan', ";
     $query .= "gender = '$gender'";
+    
 
     $result = mysqli_query($con,$query);
 } else {

@@ -33,8 +33,8 @@ if(empty($_SESSION['username']) OR empty($_SESSION['password'])) {
                 <li><a href="?hal=dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
                 <li><a href="?hal=pelanggaran"><i class="fas fa-exclamation-triangle"></i> Pelanggaran</a></li>
                 <li><a href="?hal=siswa"><i class="fas fa-user-graduate"></i> Data Siswa</a></li>
-                <li><a href="#"><i class="fas fa-history"></i> Riwayat</a></li>
-                <li><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                <li><a href="?hal=riwayat"><i class="fas fa-history"></i> Riwayat</a></li>
+                <li><a href="?hal="><i class="fas fa-sign-out-alt"></i> Logout</a></li>
             </ul>
         </div>
     </div>  

@@ -10,14 +10,14 @@ $id         = $_POST['id'];
 $nama       = $_POST['nama_siswa'];
 $nis         = $_POST['nis'];
 $tgl        = $_POST['tanggal'];
-$kelas = $_POST['kelas'];
+$kelas      = $_POST['kelas'];
 $jurusan        = $_POST['jurusan'];
 $gender        = $_POST['gender'];
 
 $error = "";
 
 if($foto == ""){
-    $query  = "INSERT INTO siswa SET ";
+    $query  = "update siswa SET ";
     $query .= "foto = '$foto', ";
     $query .= "nama_siswa = '$nama', ";
     $query .= "nis = '$nis', ";
@@ -47,7 +47,7 @@ if($foto == ""){
 
         move_uploaded_file($lokasi,"images/".$foto);
 
-        $query  = "UPDATE siswa SET ";
+    $query  = "UPDATE siswa SET ";
     $query .= "foto = '$foto', ";
     $query .= "nama_siswa = '$nama', ";
     $query .= "nis = '$nis', ";
@@ -61,11 +61,14 @@ if($foto == ""){
     }
 }
 
-if ($hasil > 0){
-    echo "barang berhasil diperbaharui!";
-    echo "<meta http-equiv='refresh' content='2; url=?hal=pelanggaran'>";
-} else{
-    echo "Tidak ada data yang diperbaharui <br>";
-    echo "<meta http-equiv='refresh' content='2; url=?hal=pelanggaran'>";
+if($error != ""){
+    echo $error;
+    echo "<meta http-equiv='refresh' content='2; url=?hal=siswa_edit&id=$id'>";
+} elseif ($query){
+    echo "Berhasil memperbaharui data pegawai <b>$nama</b>";
+    echo "<meta http-equiv='refresh' content='1; url=?hal=siswa'>";
+} else {
+    echo "Tidak dapat menyimpan data!<br>";
+    echo mysqli_error();
 }
 ?>

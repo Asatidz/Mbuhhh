@@ -12,56 +12,42 @@ if(!defined('INDEX')) die();
     </div>
 
     <div class="form-group">
-        <label for="nama">Nama</label>
+        <label for="nama_siswa">Nama</label>
         <div class="input">
-            <input type="text" name="nama" id="nama">
+            <input type="text" name="nama_siswa" id="nama_siswa" required>
         </div>
     </div>
 
     <div class="form-group">
         <label for="nis">NIS</label>
-        <input type="number" name="nis" id="nis"> 
+        <input type="number" name="nis" id="nis" required> 
     </div>
 
     <div class="form-group">
-        <label for="tanggal">Tanggal</label>
+        <label for="tanggal">Tanggal Lahir</label>
         <div class="input">
-            <input type="date" name="tanggal" id="tanggal">
+            <input type="date" name="tanggal" id="tanggal" required>
         </div>
     </div>
 
-        <div class="form-group">
-        <label for="kelas">Tanggal</label>
-        <div class="input">
-<select name="kelas" id="kelas">
-    <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-</select>
-        </div>
+    <div class="form-group">
+        <label for="kelas">Kelas</label>
+        <input type="radio" name="kelas" id="kelas" value="10" required>10
+        <input type="radio" name="kelas" id="kelas" value="11" required>11
+        <input type="radio" name="kelas" id="kelas" value="12" required>12
     </div>
 
-            <div class="form-group">
-        <label for="jurusan">Jurusan</label>
-        <div class="input">
-<select name="jurusan" id="jurusan">
-    <option value="AKL">AKL</option>
-    <option value="PPLG">PPLG</option>
-</select>
-        </div>
-    </div>
+<div class="form-group">
+    <label for=""jurusan>Jurusan</label>
+    <input type="radio" name="jurusan" id="jurusan" value="AKL" required>AKL
+    <input type="radio" name="jurusan" id="jurusan" value="PPLG" required>PPLG
+</div>
 
-            <div class="form-group">
-        <label for="gender">Tanggal</label>
-        <div class="input">
-<select name="gender" id="gender">
-    <option value="L">Laki-Laki</option>
-    <option value="P">Perempuan</option>
-</select>
-        </div>
-    </div>
- 
-
+<div class="form-group">
+    <label for=""jurusan>Jurusan</label>
+    <input type="radio" name="gender" id="gender" value="L" required>Laki-laki
+    <input type="radio" name="gender" id="gender" value="P" required>Perempuan
+</div>
 
     <div class="form-group">
         <input type="submit" value="Simpan" class="tombol simpan">

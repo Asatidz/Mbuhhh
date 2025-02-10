@@ -26,7 +26,7 @@ $data = mysqli_fetch_assoc($result);
     <!-- Input Nama -->
 
     <div class="form-group">
-        <label for="nama">Nama</label>
+        <label for="nama_siswa">Nama</label>
         <div class="input">
             <input type="text" name="nama_siswa" id="nama_siswa" value="<?=$data['nama_siswa']?>">
         </div>
@@ -36,7 +36,7 @@ $data = mysqli_fetch_assoc($result);
     <div class="form-group">
         <label for="nis">NIS</label>
         <div class="input">
-            <input type="number" name="nis" id="nis" value="<?=$data['nis']?>" >
+            <input type="number" name="nis" id="nis" value="<?=$data['nis']?>" readonly>
         </div>
     </div>
 
@@ -51,37 +51,71 @@ $data = mysqli_fetch_assoc($result);
     </div>
 
     <!-- Input Keterangan -->
+    <!-- Input Gender -->
     <div class="form-group">
         <label for="kelas">Kelas</label>
-        <div class="input">
-<select name="kelas" id="kelas" value="<?=$data['kelas']?>">
-        <option value="10">10</option>
-    <option value="11">11</option>
-    <option value="12">12</option>
-</select>
-        </div>
+
+        <!-- Pengecekan gender -->
+        <?php
+        if($data['kelas']=="10"){
+            $l=" checked";
+            $p="";
+            $s="";
+        }if($data['kelas']=="11"){
+            $l="";
+            $p=" checked";
+            $s="";
+        }else{
+            $l="";
+            $p="";
+            $s=" checked";
+        }
+        ?>
+
+        <input type="radio" name="kelas" id="kelas" value="10" <?= $l ?>> 10
+        <input type="radio" name="kelas" id="kelas" value="11" <?= $p ?>> 11
+        <input type="radio" name="kelas" id="kelas" value="12" <?= $s ?>> 12
     </div>
 
-        <div class="form-group">
-        <label for="jurusan">JURUSAN</label>
-        <div class="input">
-<select name="jurusan" id="jurusan" value="<?=$data['jurusan']?>">
-        <option value="AKL">AKL</option>
-    <option value="PPLG">PPLG</option>
-</select>
-        </div>
+    <!-- Input Gender -->
+    <div class="form-group">
+        <label for="jurusan">Jurusan</label>
+
+        <!-- Pengecekan gender -->
+        <?php
+        if($data['jurusan']=="AKL"){
+            $ak=" checked";
+            $pl="";
+        }else{
+            $ak="";
+            $pl=" checked";
+        }
+        ?>
+
+        <input type="radio" name="jurusan" id="jurusan" value="AKL" <?= $ak ?>> AKL
+        <input type="radio" name="jurusan" id="jurusan" value="PPLG" <?= $pl ?>> PPLG
     </div>
 
-        <div class="form-group">
-        <label for="gender">GEnder</label>
-        <div class="input">
-<select name="gender" id="gender" value="<?=$data['gender']?>">
-        <option value="10">10</option>
-    <option value="L">Laki-Laki</option>
-    <option value="P">Perempuan</option>
-</select>
-        </div>
+
+    <!-- Input Gender -->
+    <div class="form-group">
+        <label for="jenis">Gender</label>
+
+        <!-- Pengecekan gender -->
+        <?php
+        if($data['gender']=="L"){
+            $i=" checked";
+            $n="";
+        }else{
+            $i="";
+            $n=" checked";
+        }
+        ?>
+
+        <input type="radio" name="gender" id="gender" value="L" <?= $i ?>> Laki-laki
+        <input type="radio" name="gender" id="gender" value="P" <?= $n ?>> Perempuan
     </div>
+
 
 
     <div class="form-group">

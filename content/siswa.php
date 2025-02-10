@@ -21,20 +21,16 @@ if(!defined('INDEX')) die();
         </tr>
     </thead>
     <tbody>
-<?php
-$query = "SELECT siswa.*, riwayat_pelanggaran.* FROM siswa ";
-$query .= "LEFT JOIN riwayat_pelanggaran ";
-$query .= "ON riwayat_pelanggaran.id_siswa = siswa.id_siswa ";
-$query .= "ORDER BY riwayat_pelanggaran.id_siswa DESC";
-$result = mysqli_query($con,$query);
-$no = 0;
-
-while($data = mysqli_fetch_assoc($result)){
-    $no++;
-?>
+        <?php
+        $query = "SELECT * FROM siswa ORDER BY id_siswa DESC";
+        $result = mysqli_query($con,$query);
+        $no = 0;
+        while($data = mysqli_fetch_array($result)){
+            $no++;
+        ?>
 
 <tr>
-    <td><?=$no;?></td>
+    <td><?=$no?></td>
     <td><img src="images/<?=$data['foto']?>" alt="" width="100"></td>
     <td><?=$data['nama_siswa']?></td>
     <td><?=$data['nis']?></td>

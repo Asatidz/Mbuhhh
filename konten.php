@@ -17,7 +17,12 @@ $halaman = [
     "siswa_hapus",
     "siswa_tebus",
     "siswa_proses",
-    "cek"
+    "riwayat",
+    "riwayat_tambah",
+    "riwayat_insert",
+    "riwayat_edit",
+    "riwayat_update",
+    "riwayat_hapus"
 ];
 
 if (isset($_GET['hal'])) {
