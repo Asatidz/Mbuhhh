@@ -19,10 +19,13 @@
             if($data = mysqli_fetch_assoc($result)){
                 $no++;?>
 
-<form action="prosesdata.php" method="post">
-    <div class="form-group">
+<form action="?hal=prosesdata" method="post">
+
+    <input type="hidden" name="id" value="<?=$data['id_siswa']?>">
+
+<div class="form-group">
         <label for="nis">NIS</label>
-            <input type="number" name="id" id="id" value="<?=$data['nis']?>" readonly>
+            <input type="number" name="nis" id="nis" value="<?=$data['nis']?>" readonly>
         </div>
                 
             <div class="form-group">
@@ -125,7 +128,7 @@
                 $no++;
         ?>
 
-<form action="?hal=prosesdata.php" method="post">
+<form action="?hal=prosesdata" method="post">
 <!-- Input kode barang -->
 <div class="form-group">
     <label for="kode">kode Pl</label>

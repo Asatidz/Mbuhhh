@@ -1,38 +1,31 @@
 <?php
+if (!defined('INDEX')) die();
 
-if(!defined('INDEX')) die("");
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nis = $_POST['nis'];
-    $kode = $_POST['kode'];
+$id       = $_POST['id'];  // Pastikan id dikirim dalam form POST
+$tgl      = date('Y-m-d'); // Menggunakan fungsi PHP untuk mendapatkan tanggal saat ini
+$poin     = $_POST['poin']; 
+$kode     = $_POST['kode'];
 
-    // Ambil data poin berdasarkan kode pelanggaran
-    $query_pelanggaran = "SELECT poin FROM pelanggaran WHERE kode = '$kode'";
-    $result_pelanggaran = mysqli_query($con, $query_pelanggaran);
-    
-    if ($data_pelanggaran = mysqli_fetch_assoc($result_pelanggaran)) {
-        $poin = $data_pelanggaran['poin'];
+// Mengambil poin dari tabel pelanggaran berdasarkan kode
+$query = "SELECT poin FROM pelanggaran WHERE kode = '$kode'";
+$result = mysqli_query($con, $query);
+$data = mysqli_fetch_assoc($result);
+$poin = $data['poin'];  // Ambil poin dari pelanggaran
 
-        // Simpan ke tabel riwayat (dengan tanggal otomatis)
-        $query_insert = "INSERT INTO riwayat (nis, tanggal, kode, poin) VALUES ('$nis', CURRENT_DATE(), '$kode', '$poin')";
-        $insert_result = mysqli_query($con, $query_insert);
+// Menyimpan riwayat pelanggaran
+$query = "INSERT INTO riwayat_pelanggaran (tanggal, poin, kode) VALUES ('$tgl', '$poin', '$kode')";
+$result = mysqli_query($con, $query);
 
-        if ($insert_result) {
-            // Update poin di tabel siswa
-            $query_update = "UPDATE siswa SET poin = poin + $poin WHERE nis = '$nis'";
-            mysqli_query($con, $query_update);
+// Update poin siswa
+$query = "UPDATE siswa SET poin = poin + $poin WHERE id_siswa = '$id'";
+$result = mysqli_query($con, $query);
 
-            // Tampilkan pesan sukses + redirect setelah 2 detik
-            echo "Data pelanggaran untuk NIS <b>$nis</b> berhasil disimpan!";
-            echo "<meta http-equiv='refresh' content='2; url=?hal=riwayat'>";
-        } else {
-            echo "Gagal menyimpan data!<br>";
-            echo mysqli_error($con);
-        }
-    } else {
-        echo "Kode pelanggaran tidak ditemukan!";
-    }
+// Menampilkan hasil
+if ($result) {
+    echo "Jabatan <b>$id</b> berhasil disimpan!";
+    echo "<meta http-equiv='refresh' content='2; url=?hal=pelanggaran'>";
 } else {
-    echo "Akses tidak valid!";
+    echo "Tidak dapat menyimpan data!<br>";
+    echo mysqli_error($con);
 }
 ?>
-
