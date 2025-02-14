@@ -38,7 +38,7 @@
               <td><?= $no ?></td>
                 <td><?= $data['nis'] ?></td>
                 <td><?= $data['tanggal_riw'] ?></td>
-                <td><?= $data['kode'] ?></td>
+                <td><?= $data['kode_pl'] ?></td>
                 <td><?= $data['poin_plg'] ?></td>
               <td>
                 <a href="?hal=riwayat_edit&id=<?= $data['id_riwayat'] ?>" class="tombol edit"> Edit </a>

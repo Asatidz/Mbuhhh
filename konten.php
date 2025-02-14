@@ -20,8 +20,6 @@ $halaman = [
     "riwayat",
     "riwayat_tambah",
     "prosesdata",
-    "riwayat_edit",
-    "riwayat_update",
     "riwayat_hapus"
 ];
 
