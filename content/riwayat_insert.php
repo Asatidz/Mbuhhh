@@ -28,7 +28,7 @@ $result = mysqli_query($con, $query);
 
 // Menampilkan hasil
 if ($result) {
-    echo "Jabatan <b>$nama</b> berhasil disimpan!";
+    echo "Wong <b>$nama</b> berhasil disimpan!";
     echo "<meta http-equiv='refresh' content='2; url=?hal=riwayat'>";
 } else {
     echo "Tidak dapat menyimpan data!<br>";
