@@ -38,6 +38,7 @@ if(!defined('INDEX')) die();
     <td><?=$data['kelas']?></td>
     <td><?=$data['jurusan']?></td>
     <td><?=$data['gender']?></td>
+    <td><?=$data['poin_sis']?></td>
     <td>
         <a href="?hal=siswa_edit&id=<?=$data['id_siswa']?>"
         class="tombol edit">Edit</a>

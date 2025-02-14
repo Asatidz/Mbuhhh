@@ -23,7 +23,7 @@ $result = mysqli_query($con, $query);
 
 
 // Update poin siswa
-$query = "UPDATE siswa SET poin_sis = poin_sis + $poin WHERE id_siswa = '$id'";
+$query = "UPDATE siswa SET poin_sis = poin_sis - $poin WHERE id_siswa = '$id'";
 $result = mysqli_query($con, $query);
 
 // Menampilkan hasil
