@@ -8,7 +8,7 @@ $data = mysqli_fetch_assoc($result);
 ?>
 
 <h2 class="judul">Edit Pl</h2>
-<form action="?hal=pelanggaran_update" method="post" ">
+<form action="?hal=pelanggaran_update" method="post">
 
     <!-- Input ID -->
     <input type="hidden" name="id" value="<?=$data['id_pelanggaran']?>">
